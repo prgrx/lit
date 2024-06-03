@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Menu Overlay</title>
+		
+		<style>
+			html, body {
+				margin: 0px;
+				height: 100%;
+			}
+		</style>
+
+		<script type="module">
+			import { html, css, LitElement } from 'https://esm.sh/lit';
+			import { define } from 'https://pedr.ooo/js/define';
+
+			class MenuOverlay extends LitElement {
+				static selector = 'menu-overlay';
+
+				static styles = css`
+					:host {
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						background-color: rgba(0,0,0,.25);
+						color: white;
+						justify-content: center;
+						align-items: center;
+					}
+
+					button {
+						background-color: white;
+						color: black;
+						border: 1px black solid;
+						border-radius: 5px;
+						padding: 5px;
+					}
+				`;
+
+				render() {
+					return html`
+						-!"·%?-^
+						<br>
+						<button>VER MENÚ</button>
+					`
+				}
+			}
+
+			define(MenuOverlay);
+		</script>
+	</head>
+	<body>
+		<menu-overlay></menu-overlay>
+	</body>
+</html>
